@@ -5,8 +5,7 @@ Homebrew tap for [bit-ship](https://www.bit-ship.dev) — a containerized deploy
 ## Install
 
 ```sh
-brew tap widas/bit-ship
-brew install bit-ship
+brew tap bit-ship-dev/ && brew install bit-ship
 ```
 
 ## Requirements
