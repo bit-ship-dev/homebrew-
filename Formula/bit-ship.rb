@@ -1,8 +1,10 @@
 class BitShip < Formula
-  desc "Containerized deployment tool"
+  desc "Container tool"
   homepage "https://www.bit-ship.dev"
+
   url "https://registry.npmjs.org/bit-ship/-/bit-ship-0.5.0-27c4463.tgz"
-  sha256 "sha512-fjJFeA0irVwHHVVlj6ZwREbw1zG7Tppgu0SPPeMkzS88GxKeB3fdcuho2ps5Jdg+r6+WctJKNXOgXRXkKqiOQg=="
+  sha256 "0bac06268ad8b1be3de6bfc10db65ea798e3e4e761fcce5525e69b867f5ae701"
+
   version "0.5.0-27c4463"
   license "MIT"
 
