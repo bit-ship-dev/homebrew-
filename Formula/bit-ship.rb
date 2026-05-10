@@ -12,7 +12,7 @@ class BitShip < Formula
   depends_on "podman"
 
   def install
-    system "#{Formula["node"].opt_bin}/npm", "install", "-g", "--prefix", prefix, "bit-ship"
+    # system "#{Formula["node"].opt_bin}/npm", "install", "-g", "--prefix", prefix, "bit-ship"
     bin.install_symlink "bit-ship" => "bit-pod"
     bin.install_symlink "bit-ship" => "bitship"
     bin.install_symlink "bit-ship" => "bitpod"
