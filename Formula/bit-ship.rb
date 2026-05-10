@@ -1,5 +1,5 @@
 class BitShip < Formula
-  desc "Container tool"
+  desc "Bit-Ship CLI is tool that analyses your code and generates a custom environment for your needs\nYou can use if to local development, CI/CD or even production."
   homepage "https://www.bit-ship.dev"
 
   url "https://registry.npmjs.org/bit-ship/-/bit-ship-0.5.0-1eb2838.tgz"
@@ -8,14 +8,15 @@ class BitShip < Formula
   version "0.5.0-1eb2838"
   license "MIT"
 
-  depends_on "node"
+  depends_on "node@24"
   depends_on "podman"
 
   def install
-    system "#{Formula["node"].opt_bin}/npm", "install", "-g", "--prefix", prefix, "bit-ship"
-    bin.install_symlink "bit-ship" => "bit-pod"
-    bin.install_symlink "bit-ship" => "bitship"
-    bin.install_symlink "bit-ship" => "bitpod"
+    system "#{Formula["node@24"].opt_bin}/npm", "install", "-g", "--prefix", prefix, "."
+    bin.install_symlink lib/"node_modules/bit-ship/bin/bin.js" => "bit-ship"
+    bin.install_symlink lib/"node_modules/bit-ship/bin/bin.js" => "bitship"
+    bin.install_symlink lib/"node_modules/bit-ship/bin/pod.js" => "bit-pod"
+    bin.install_symlink lib/"node_modules/bit-ship/bin/pod.js" => "bitpod"
   end
 
   test do
