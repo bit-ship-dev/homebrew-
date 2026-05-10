@@ -13,10 +13,9 @@ class BitShip < Formula
 
   def install
     system "#{Formula["node@24"].opt_bin}/npm", "install", "-g", "--prefix", prefix, "."
-    bin.install_symlink lib/"node_modules/bit-ship/bin/bin.js" => "bit-ship"
-    bin.install_symlink lib/"node_modules/bit-ship/bin/bin.js" => "bitship"
-    bin.install_symlink lib/"node_modules/bit-ship/bin/pod.js" => "bit-pod"
-    bin.install_symlink lib/"node_modules/bit-ship/bin/pod.js" => "bitpod"
+    # bin.install_symlink "bit-ship" => "bitship"
+    # bin.install_symlink "bit-ship" => "bit-pod"
+    # bin.install_symlink "bit-ship" => "bitpod"
   end
 
   test do
